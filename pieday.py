@@ -5,12 +5,10 @@ import matplotlib.pyplot as plt
 
 activities = []
 
-# Open the CSV file
+# Ingest the CSV file
 with open('pieday.csv', 'r') as file:
-    # Create a CSV reader
     reader = csv.reader(file)
     next(reader)  # Skip the header row
-    
     # Iterate over each row in the CSV
     for row in reader:
         activity_name = row[0]
@@ -27,9 +25,6 @@ colors = ['#85C1E9', '#F5B041', '#A569BD', '#45B39D', '#52BE80', '#F1948A', '#BB
 
 # Labels with activity name and start-stop times
 labels = [f'{name}\n{start_time.strftime("%I:%M %p")}-{stop_time.strftime("%I:%M %p")}' for start_time, stop_time, name, _ in activities]
-
-# Labels with activity name, start-stop times, and duration
-# labels = [f'{name}\n{start_time.strftime("%I:%M %p")}-{stop_time.strftime("%I:%M %p")}\nDuration: {duration} hrs' for start_time, stop_time, name, duration in activities]
 
 # Sizes for each slice
 sizes = [duration for _, _, _, duration in activities]
@@ -49,8 +44,6 @@ for hour, label in zip([0, 6, 12, 18, 15, 14.5, 13.5], ['Noon', '6AM', 'Midnight
     y = math.sin(angle)  # Calculate y coordinate
     ax.plot([0, x], [0, y], color='darkgrey')  # Draw line from center to point in dark grey
     ax.text(0.9*x, 0.9*y, label, ha='center', va='center')  # Add text at point, moved a bit towards the center
-
-# Rest of the code remains the same
 
 # plt.show()
 
