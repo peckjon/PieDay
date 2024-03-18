@@ -1,7 +1,7 @@
-import matplotlib.pyplot as plt
+from datetime import datetime
 import csv
 import math
-from datetime import datetime
+import matplotlib.pyplot as plt
 
 activities = []
 
