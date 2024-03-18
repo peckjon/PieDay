@@ -2,6 +2,8 @@
 
 This is a Python script that generates a pie chart visualizing a day's activities. The activities are read from a CSV file and displayed on the pie chart with different colors for each activity. The chart also includes lines and labels for specific times of the day.
 
+![Pie Day Chart](pieday.png)
+
 ## Requirements
 
 - Python 3.6 or higher
