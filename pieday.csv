@@ -1,13 +1,13 @@
 activity,start,stop,hours,value
-sleeping,11:00 PM,8:00 AM,9,11:00 PM-8:00 AM
-breakfast,8:00 AM,8:30 AM,0.5,8:00 AM-8:30 AM
-drive,8:30 AM,9:00 AM,0.5,8:30 AM-9:00 AM
-school/work,9:00 AM,4:00 PM,7,9:00 AM-4:00 PM
-drive,4:00 PM,4:30 PM,0.5,4:00 PM-4:30 PM
-alone time,4:30 PM,5:30 PM,1,4:30 PM-5:30 PM
-dinner,5:30 PM,6:30 PM,1,5:30 PM-6:30 PM
-family game/tv,6:30 PM,8:30 PM,2,6:30 PM-8:30 PM
-snack,8:30 PM,9:00 PM,0.5,8:30 PM-9:00 PM
-read,9:00 PM,10:00 PM,1,9:00 PM-10:00 PM
-brush/shower,10:00 PM,10:30 PM,0.5,10:00 PM-10:30 PM
-podcast/talk,10:30 PM,11:00 PM,0.5,10:30 PM-11:00 PM
+sleeping,11:00 PM,8:00 AM
+breakfast,8:00 AM,8:30 AM
+drive,8:30 AM,9:00 AM
+school/work,9:00 AM,4:00 PM
+drive,4:00 PM,4:30 PM
+alone time,4:30 PM,5:30 PM
+dinner,5:30 PM,6:30 PM
+family game/tv,6:30 PM,8:30 PM
+snack,8:30 PM,9:00 PM
+read,9:00 PM,9:30 PM
+brush/shower,9:30 PM,10:00 PM
+podcast/talk,10:00 PM,10:30 PM

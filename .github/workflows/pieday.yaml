@@ -1,0 +1,44 @@
+name: Run Pieday script
+
+on:
+  push:
+    paths:
+      - '.github/workflows/main.yml'
+      - 'pieday.csv'
+      - 'pieday.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Cache Python packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run pieday.py
+      run: python pieday.py
+
+    - name: Commit and push if it changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add pieday.png
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update pieday.png"
+        git push
