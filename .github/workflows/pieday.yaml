@@ -6,6 +6,7 @@ on:
       - '.github/workflows/main.yml'
       - 'pieday.csv'
       - 'pieday.py'
+    workflow_dispatch:
 
 jobs:
   build:
